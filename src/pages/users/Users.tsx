@@ -4,6 +4,7 @@ import "./users.scss";
 import noavatar from "../../assets/noavatar.png";
 import { userRows } from "../../data";
 import { useState } from "react";
+import Add from "../../components/add/Add";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
@@ -70,6 +71,7 @@ const Users = () => {
       <div className="chart">
         <DataTable slug="users" columns={columns} rows={userRows} />
       </div>
+      {open && <Add columns={columns} slug="user" setOpen={setOpen} />}
     </div>
   );
 };

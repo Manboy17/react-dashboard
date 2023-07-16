@@ -4,14 +4,17 @@ import expand from "../../assets/expand.svg";
 import notification from "../../assets/notifications.svg";
 import setting from "../../assets/setting.svg";
 import person from "../../assets/person.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="logo">Dash UI</div>
+      <Link to="/" className="logo">
+        Dash UI
+      </Link>
       <div className="links">
-        <img src={search} alt="search" />
-        <img src={expand} alt="expand" />
+        <img src={search} alt="search" className="icon" />
+        <img src={expand} alt="expand" className="icon" />
         <div className="notification">
           <img src={notification} alt="notification" />
           <span>1</span>

@@ -1,11 +1,11 @@
 import "./styles/global.scss";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from "./pages/home/Home";
-import Products from "./pages/products/Products";
 import Users from "./pages/users/Users";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
+import User from "./pages/user/User";
 
 function App() {
   const Layout = () => {
@@ -35,12 +35,12 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/products",
-          element: <Products />,
-        },
-        {
           path: "/users",
           element: <Users />,
+        },
+        {
+          path: "/users/:id",
+          element: <User />,
         },
       ],
     },
