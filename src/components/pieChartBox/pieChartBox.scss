@@ -1,0 +1,39 @@
+.pieChartBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  .chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .option {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
